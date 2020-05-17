@@ -1,14 +1,18 @@
-package com;
+package day3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class Mywebapplication {
+public class Day3Application {
     public static void main(String[] args) {
-        SpringApplication.run(Mywebapplication.class,args);
+        SpringApplication.run(Day3Application.class,args);
+    }
+    @GetMapping("/getInfo")
+    public String getInfo(){
+        return "day3";
     }
 }
